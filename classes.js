@@ -42,3 +42,10 @@ var Member = /** @class */ (function (_super) {
 //john.register();
 var mike = new Member(123, 'Mike', 'mike@gamil.com', 34);
 mike.payInvoice();
+var Things;
+(function (Things) {
+    Things[Things["three"] = 3] = "three";
+    Things[Things["four"] = 4] = "four";
+    Things[Things["five"] = 5] = "five";
+})(Things || (Things = {}));
+console.log(Things.five);
