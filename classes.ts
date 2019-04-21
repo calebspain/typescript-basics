@@ -2,11 +2,11 @@ interface UserInterface {
     name: string;
     email: string;
     age: number;
-    register();
-    payInvoice();
+    register(): void;
+    payInvoice(): void;
 }
 
-class User implements UserInterface {
+ export class User implements UserInterface {
     name: string;
     email: string;
     age: number;
@@ -28,7 +28,7 @@ class User implements UserInterface {
     }
 }
 
-class Member extends User {
+export class Member extends User {
     id: number;
 
     constructor(id: number, name: string, email: string, age: number) {
@@ -44,7 +44,3 @@ class Member extends User {
 //let john = new User('John', 'J@gmail.com', 20);
 
 //john.register();
-
-let mike: User = new Member(123, 'Mike', 'mike@gamil.com', 34);
-mike.payInvoice();
-
