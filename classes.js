@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,6 +12,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+exports.__esModule = true;
 var User = /** @class */ (function () {
     function User(name, email, age) {
         this.name = name;
@@ -26,6 +28,7 @@ var User = /** @class */ (function () {
     };
     return User;
 }());
+exports.User = User;
 var Member = /** @class */ (function (_super) {
     __extends(Member, _super);
     function Member(id, name, email, age) {
@@ -38,14 +41,6 @@ var Member = /** @class */ (function (_super) {
     };
     return Member;
 }(User));
+exports.Member = Member;
 //let john = new User('John', 'J@gmail.com', 20);
 //john.register();
-var mike = new Member(123, 'Mike', 'mike@gamil.com', 34);
-mike.payInvoice();
-var Things;
-(function (Things) {
-    Things[Things["three"] = 3] = "three";
-    Things[Things["four"] = 4] = "four";
-    Things[Things["five"] = 5] = "five";
-})(Things || (Things = {}));
-console.log(Things.five);
